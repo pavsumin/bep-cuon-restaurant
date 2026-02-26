@@ -19,12 +19,12 @@ export default function Navbar() {
 		<>
 			<header
 				className={`
-          fixed top-2 left-0 w-full z-50
+          fixed top-0 left-0 w-full z-50
           transition-all duration-500
           ${scrolled ? 'bg-[#0e2e1c]/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'}
         `}
 			>
-				<div className='max-w-7xl mx-auto px-6 py-5 flex items-center justify-between text-white'>
+				<div className='max-w-7xl mx-auto px-6 py-6 flex items-center justify-between text-white'>
 					{/* Logo */}
 					<div className='font-heading text-lg tracking-widest text-[#f2d47a]'>
 						BÉP CUỐN
