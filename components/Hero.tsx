@@ -15,22 +15,28 @@ export default function Home() {
 
 			{/* Content */}
 			<section className='relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-6'>
-				<h1 className='text-4xl sm:text-6xl font-bold tracking-wide text-[#f2d47a] drop-shadow-xl'>
+				<h1 className='font-heading text-5xl sm:text-6xl font-extrabold tracking-wide text-[#f2d47a]'>
 					BÉP CUỐN ĐÀ NẴNG
 				</h1>
 
-				<p className='mt-4 text-sm tracking-[0.3em] uppercase text-white/80'>
+				<p className='mt-4 font-body text-sm tracking-[0.3em] uppercase text-white/80'>
 					Vietnamese Cuisine · Michelin Selected 2024
 				</p>
 
-				<div className='mt-8 flex flex-col sm:flex-row gap-4'>
-					<button className='px-8 py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300 cursor-pointer'>
+				<div className='mt-18 flex flex-col sm:flex-row gap-4'>
+					<a
+						href='#menu'
+						className='px-8 py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300 cursor-pointer rounded-xl'
+					>
 						View Menu
-					</button>
+					</a>
 
-					<button className='px-8 py-3 bg-[#d4af37] text-black hover:bg-[#f2d47a] transition-all duration-300 cursor-pointer'>
+					<a
+						href='#book'
+						className='px-8 py-3 bg-[#d4af37] text-black hover:bg-[#f2d47a] transition-all duration-300 cursor-pointer rounded-xl'
+					>
 						Book a Table
-					</button>
+					</a>
 				</div>
 			</section>
 		</main>

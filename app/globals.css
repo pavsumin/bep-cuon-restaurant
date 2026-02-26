@@ -1,12 +1,14 @@
 @import 'tailwindcss';
 
 :root {
-	--brand-green: #0e2e1c;
-	--brand-gold: #d4af37;
-	--brand-light-gold: #f2d47a;
-	--brand-brown: #5a3a1a;
+	--font-body: 'Poppins', sans-serif;
+	--font-heading: 'Playfair Display', serif;
 }
 
-body {
-	font-family: var(--font-serif);
+.font-body {
+	font-family: var(--font-body);
+}
+
+.font-heading {
+	font-family: var(--font-heading);
 }
