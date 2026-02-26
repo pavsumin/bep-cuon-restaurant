@@ -35,7 +35,7 @@ export default function Navbar() {
 						{['Story', 'Menu', 'Gallery', 'Location'].map(item => (
 							<Link
 								key={item}
-								href={`#${item.toLowerCase()}`}
+								href={`/#${item.toLowerCase()}`}
 								className='relative group cursor-pointer'
 							>
 								<span className='transition-colors duration-300 group-hover:text-[#d4af37]'>
