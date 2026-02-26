@@ -36,7 +36,7 @@ export default function StorySection() {
 					{/* CTA */}
 					<div className='mt-10'>
 						<a
-							href='#'
+							href='/story/'
 							className='inline-block px-8 py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300 rounded-xl'
 						>
 							Read Our Story
