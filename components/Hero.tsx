@@ -26,7 +26,7 @@ export default function Home() {
 				</h1>
 
 				<p className='mt-5 font-body text-xs sm:text-sm tracking-[0.4em] uppercase text-white/80'>
-					Vietnamese Cuisine · Michelin Selected 2024
+					Vietnamese Cuisine · Michelin Selected 2025
 				</p>
 
 				<div className='mt-12 flex flex-col sm:flex-row gap-5'>
