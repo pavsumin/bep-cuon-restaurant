@@ -1,42 +1,38 @@
-import Image from 'next/image'
-
-export default function Hero() {
+export default function Home() {
 	return (
-		<section className='relative h-screen w-full overflow-hidden'>
-			{/* Background Image */}
+		<main className='relative min-h-screen text-white'>
+			{/* Background */}
 			<div className='absolute inset-0'>
-				<Image
+				<img
 					src='/hero.jpg'
-					alt='Bep Cuon Signature Dish'
-					fill
-					priority
-					className='object-cover'
+					alt='Vietnamese cuisine'
+					className='w-full h-full object-cover'
 				/>
+
+				{/* Gradient overlay */}
+				<div className='absolute inset-0 bg-[linear-gradient(to_bottom,rgba(14,46,28,0.45),rgba(14,46,28,0.95))]' />
 			</div>
 
-			{/* Overlay */}
-			<div className='absolute inset-0 bg-heroGradient' />
-
 			{/* Content */}
-			<div className='relative z-10 flex flex-col items-center justify-center h-full text-center px-6'>
-				<h1 className='text-4xl md:text-6xl font-bold text-brandGold tracking-wide uppercase'>
-					Bếp Cuốn Đà Nẵng
+			<section className='relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-6'>
+				<h1 className='text-4xl sm:text-6xl font-bold tracking-wide text-[#f2d47a] drop-shadow-xl'>
+					BÉP CUỐN ĐÀ NẴNG
 				</h1>
 
-				<p className='mt-4 text-brandLightGold text-lg md:text-xl max-w-xl'>
-					Vietnamese Cuisine • Michelin Selected 2024
+				<p className='mt-4 text-sm tracking-[0.3em] uppercase text-white/80'>
+					Vietnamese Cuisine · Michelin Selected 2024
 				</p>
 
-				<div className='mt-8 flex gap-4'>
-					<button className='bg-brandGold text-brandGreen px-6 py-3 rounded-full font-semibold hover:scale-105 transition'>
+				<div className='mt-8 flex flex-col sm:flex-row gap-4'>
+					<button className='px-8 py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300 cursor-pointer'>
 						View Menu
 					</button>
 
-					<button className='border border-brandGold text-brandGold px-6 py-3 rounded-full font-semibold hover:bg-brandGold hover:text-brandGreen transition'>
+					<button className='px-8 py-3 bg-[#d4af37] text-black hover:bg-[#f2d47a] transition-all duration-300 cursor-pointer'>
 						Book a Table
 					</button>
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 	)
 }
