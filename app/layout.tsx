@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en' className={`${poppins.variable} ${playfair.variable}`}>
-			<body className='bg-black text-white font-body'>
+			<body className='bg-[#0e2e1c] text-white font-body'>
 				<Navbar />
 				{children}
 			</body>
