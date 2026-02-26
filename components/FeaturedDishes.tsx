@@ -19,7 +19,10 @@ const dishes = [
 
 export default function FeaturedDishes() {
 	return (
-		<section id='menu' className='relative bg-[#0e2e1c] text-white py-24 px-6'>
+		<section
+			id='featured'
+			className='relative bg-[#0e2e1c] text-white py-24 px-6'
+		>
 			<div className='max-w-7xl mx-auto'>
 				{/* Section Heading */}
 				<div className='text-center mb-16'>
