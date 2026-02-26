@@ -2,17 +2,23 @@
 
 import Image from 'next/image'
 
-const dishes = [
+const featured = [
 	{
-		title: 'Fresh Rice Rolls',
+		name: 'Fresh Rice Rolls',
+		desc: 'Traditional Vietnamese rice paper rolls with herbs',
+		price: '89.000 VND',
 		image: '/dishes/dish1.png',
 	},
 	{
-		title: 'Grilled Duck with Herbs',
+		name: 'Grilled Duck with Herbs',
+		desc: 'Charcoal grilled duck served with fresh greens',
+		price: '259.000 VND',
 		image: '/dishes/dish2.png',
 	},
 	{
-		title: 'Signature Vietnamese Bowl',
+		name: 'Signature Vietnamese Bowl',
+		desc: 'Chef’s special bowl with balanced flavors',
+		price: '149.000 VND',
 		image: '/dishes/dish3.png',
 	},
 ]
@@ -21,51 +27,87 @@ export default function FeaturedPreview() {
 	return (
 		<section
 			id='featured'
-			className='relative bg-[#0e2e1c] text-white py-24 px-6'
+			className='relative py-24 px-6 bg-[#0e2e1c] overflow-hidden'
 		>
-			<div className='max-w-7xl mx-auto'>
-				{/* Section Heading */}
-				<div className='text-center mb-16'>
-					<h2 className='font-heading text-3xl sm:text-5xl text-[#f2d47a]'>
-						Featured Dishes
-					</h2>
+			{/* Subtle background glow */}
+			<div className='absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#d4af37]/10 blur-[180px] rounded-full pointer-events-none' />
 
-					<p className='mt-4 text-sm tracking-[0.3em] uppercase text-white/60'>
-						Crafted with precision & tradition
+			<div className='relative max-w-7xl mx-auto'>
+				{/* Section Header */}
+				<div className='text-center mb-16'>
+					<h2 className='font-heading text-4xl sm:text-5xl text-[#f2d47a]'>
+						Signature Dishes
+					</h2>
+					<p className='mt-4 text-white/70 max-w-xl mx-auto'>
+						A curated selection of our most celebrated creations
 					</p>
 				</div>
 
-				{/* Grid */}
-				<div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
-					{dishes.map((dish, index) => (
+				{/* Cards */}
+				<div className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'>
+					{featured.map((dish, idx) => (
 						<div
-							key={index}
-							className='relative group overflow-hidden rounded-2xl cursor-pointer'
+							key={idx}
+							className='group relative rounded-3xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 shadow-xl'
 						>
 							{/* Image */}
-							<div className='relative h-[380px] w-full'>
+							<div className='relative h-[320px] overflow-hidden'>
 								<Image
 									src={dish.image}
-									alt={dish.title}
+									alt={dish.name}
 									fill
-									className='object-cover transition-transform duration-700 group-hover:scale-110'
+									className='object-cover transition-transform duration-700 group-hover:scale-105'
 								/>
+
+								{/* Soft gradient overlay */}
+								<div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent' />
 							</div>
 
-							{/* Dark overlay */}
-							<div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent' />
-
-							{/* Gold hover overlay */}
-							<div className='absolute inset-0 bg-[#d4af37]/0 group-hover:bg-[#d4af37]/10 transition-all duration-500' />
-
-							{/* Title */}
-							<div className='absolute bottom-8 left-8'>
-								<h3 className='font-heading text-xl sm:text-2xl text-white group-hover:text-[#f2d47a] transition-colors duration-300'>
-									{dish.title}
+							{/* Content */}
+							<div className='relative p-6'>
+								<h3 className='font-heading text-xl text-[#f2d47a]'>
+									{dish.name}
 								</h3>
+
+								<p className='mt-2 text-sm text-white/70 leading-relaxed'>
+									{dish.desc}
+								</p>
+
+								<div className='mt-4 flex justify-between items-center'>
+									<span className='text-white font-semibold'>{dish.price}</span>
+
+									<a
+										href='/menu'
+										className='text-[#d4af37] text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer'
+									>
+										Explore →
+									</a>
+								</div>
 							</div>
 						</div>
 					))}
+				</div>
+
+				{/* CTA */}
+				<div className='text-center mt-16'>
+					<a
+						href='/menu'
+						className='
+              px-8 py-3
+              bg-gradient-to-r from-[#d4af37] to-[#f2d47a]
+              text-black
+              rounded-full
+              shadow-[0_8px_30px_rgba(212,175,55,0.4)]
+							hover:scale-105
+              hover:brightness-110
+              transition-all
+              duration-300
+              cursor-pointer
+              font-medium
+            '
+					>
+						View Full Menu
+					</a>
 				</div>
 			</div>
 		</section>
