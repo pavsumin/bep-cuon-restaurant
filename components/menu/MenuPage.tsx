@@ -53,7 +53,7 @@ export default function MenuPage() {
 
 			{/* Sticky Categories */}
 			<div className='sticky top-0 z-50 bg-[#0e2e1c]/90 backdrop-blur-md border-b border-white/10'>
-				<div className='max-w-[1280px] mx-auto px-6 py-4 flex gap-6 overflow-x-auto scrollbar-hide'>
+				<div className='max-w-[1280px] mx-auto px-6 py-5 flex gap-6 overflow-x-auto scrollbar-hide'>
 					{menuData.map(category => (
 						<button
 							key={category.id}
