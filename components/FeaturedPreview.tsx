@@ -17,7 +17,7 @@ const dishes = [
 	},
 ]
 
-export default function FeaturedDishes() {
+export default function FeaturedPreview() {
 	return (
 		<section
 			id='featured'
