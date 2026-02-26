@@ -1,25 +1,47 @@
 export default function StorySection() {
 	return (
-		<section className='py-24 px-6 bg-[#0F0F0F] text-white'>
-			<div className='max-w-[900px] mx-auto text-center'>
-				<h2 className='text-3xl md:text-4xl font-semibold mb-8'>
-					A Story of Taste & Craft
-				</h2>
+		<section id='story' className='bg-[#0e2e1c] text-white py-20 px-6'>
+			<div className='max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center'>
+				{/* Image */}
+				<div className='relative'>
+					<img
+						src='/story.jpg'
+						alt='Bếp Cuốn interior'
+						className='w-full h-[400px] md:h-[500px] object-cover rounded-2xl'
+					/>
+					<div className='absolute inset-0 bg-black/20 rounded-2xl' />
+				</div>
 
-				<p className='text-white/80 leading-relaxed text-lg mb-6'>
-					At Bếp Cuốn, we celebrate the balance of tradition and refinement.
-					Each dish is crafted with carefully selected ingredients, honoring
-					Vietnamese culinary heritage while embracing modern presentation.
-				</p>
+				{/* Text */}
+				<div>
+					<h2 className='font-heading text-3xl md:text-5xl text-[#f2d47a] mb-6'>
+						Crafted with Care. Rooted in Tradition.
+					</h2>
 
-				<p className='text-white/70 leading-relaxed'>
-					Recognized by the Michelin Guide, our kitchen is driven by precision,
-					simplicity, and respect for flavor.
-				</p>
+					<div className='w-20 h-[2px] bg-[#d4af37] mb-6' />
 
-				{/* Optional highlight */}
-				<div className='mt-12 text-[#C8A45A] text-sm tracking-widest uppercase'>
-					4.9 rating · 15,000+ guests
+					<p className='font-body text-white/80 leading-relaxed text-lg mb-6'>
+						At Bếp Cuốn Đà Nẵng, every dish reflects the depth of Vietnamese
+						culinary heritage. From fresh herbs and handmade sauces to carefully
+						selected ingredients, each plate is prepared with intention and
+						balance.
+					</p>
+
+					<p className='font-body text-white/70 leading-relaxed'>
+						Recognized by the Michelin Guide, our kitchen blends authenticity
+						with refinement — offering a dining experience that feels both
+						traditional and elevated.
+					</p>
+
+					{/* CTA */}
+					<div className='mt-10'>
+						<a
+							href='#'
+							className='inline-block px-8 py-3 border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition-all duration-300 rounded-xl'
+						>
+							Read Our Story
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
