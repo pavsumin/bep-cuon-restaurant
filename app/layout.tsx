@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar'
 import { Playfair_Display, Poppins } from 'next/font/google'
 import './globals.css'
 
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en' className={`${poppins.variable} ${playfair.variable}`}>
-			<body className='bg-black text-white font-body'>{children}</body>
+			<body className='bg-black text-white font-body'>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	)
 }
