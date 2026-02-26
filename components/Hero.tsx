@@ -39,6 +39,7 @@ export default function Home() {
               text-[#d4af37]
               rounded-full
               hover:bg-[#d4af37]
+							hover:scale-105
 							hover:brightness-110
               hover:text-black
               transition-all
@@ -59,6 +60,7 @@ export default function Home() {
               text-black
               rounded-full
               shadow-[0_8px_30px_rgba(212,175,55,0.4)]
+							hover:scale-105
               hover:brightness-110
               transition-all
               duration-300

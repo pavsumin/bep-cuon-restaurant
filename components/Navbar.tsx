@@ -71,12 +71,12 @@ export default function Navbar() {
 
 					{/* Mobile Burger */}
 					<button
-						className='md:hidden flex flex-col gap-1.5'
+						className='md:hidden flex flex-col gap-1.5 cursor-pointer'
 						onClick={() => setOpen(!open)}
 					>
-						<span className='w-6 h-[2px] bg-white' />
-						<span className='w-6 h-[2px] bg-white' />
-						<span className='w-6 h-[2px] bg-white' />
+						<span className='w-6 h-[2px] bg-white rounded-lg' />
+						<span className='w-6 h-[2px] bg-white rounded-lg' />
+						<span className='w-6 h-[2px] bg-white rounded-lg' />
 					</button>
 				</div>
 			</header>
@@ -86,7 +86,7 @@ export default function Navbar() {
 				className={`
           fixed inset-0 bg-[#0e2e1c] z-40 flex flex-col items-center justify-center gap-8
           text-white text-xl tracking-widest uppercase
-          transition-all duration-500
+          transition-all duration-300
           ${open ? 'opacity-100 visible' : 'opacity-0 invisible'}
         `}
 			>
