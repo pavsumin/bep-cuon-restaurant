@@ -99,7 +99,7 @@ export default function StoryPage() {
 				<div className='mt-12 flex flex-col sm:flex-row gap-5'>
 					{/* Secondary first */}
 					<a
-						href='#menu'
+						href='/menu'
 						className='
               px-8 py-3
               border border-[#d4af37]

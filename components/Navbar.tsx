@@ -7,6 +7,13 @@ export default function Navbar() {
 	const [scrolled, setScrolled] = useState(false)
 	const [open, setOpen] = useState(false)
 
+	const navLinks = [
+		{ name: 'Story', href: '/#story' },
+		{ name: 'Menu', href: '/menu' },
+		{ name: 'Gallery', href: '/#gallery' },
+		{ name: 'Location', href: '/#location' },
+	]
+
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 40)
@@ -32,17 +39,15 @@ export default function Navbar() {
 
 					{/* Desktop Menu */}
 					<nav className='hidden md:flex gap-10 text-sm tracking-wider uppercase'>
-						{['Story', 'Menu', 'Gallery', 'Location'].map(item => (
+						{navLinks.map(item => (
 							<Link
-								key={item}
-								href={`/#${item.toLowerCase()}`}
+								key={item.name}
+								href={item.href}
 								className='relative group cursor-pointer'
 							>
 								<span className='transition-colors duration-300 group-hover:text-[#d4af37]'>
-									{item}
+									{item.name}
 								</span>
-
-								{/* underline */}
 								<span className='absolute left-0 -bottom-2 w-0 h-[1px] bg-[#d4af37] transition-all duration-300 group-hover:w-full' />
 							</Link>
 						))}
@@ -90,14 +95,14 @@ export default function Navbar() {
           ${open ? 'opacity-100 visible' : 'opacity-0 invisible'}
         `}
 			>
-				{['Story', 'Menu', 'Gallery', 'Location'].map(item => (
+				{navLinks.map(item => (
 					<Link
-						key={item}
-						href={`#${item.toLowerCase()}`}
+						key={item.name}
+						href={item.href}
 						onClick={() => setOpen(false)}
 						className='hover:text-[#d4af37] transition-colors'
 					>
-						{item}
+						{item.name}
 					</Link>
 				))}
 			</div>
