@@ -4,7 +4,7 @@ import { Locale, menuData } from '@/data/menu'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
-const locales: Locale[] = ['en', 'vi', 'kr', 'jp']
+const locales: Locale[] = ['en', 'vn', 'cn', 'kr', 'jp']
 
 export default function MenuPage() {
 	const [activeCategory, setActiveCategory] = useState(menuData[0].id)
@@ -56,7 +56,8 @@ export default function MenuPage() {
 					{locales.map(lang => {
 						const flags: Record<Locale, string> = {
 							en: '🇺🇸',
-							vi: '🇻🇳',
+							vn: '🇻🇳',
+							cn: '🇨🇳',
 							kr: '🇰🇷',
 							jp: '🇯🇵',
 						}
