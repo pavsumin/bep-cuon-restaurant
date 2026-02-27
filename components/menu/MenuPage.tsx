@@ -52,20 +52,42 @@ export default function MenuPage() {
 				</p>
 
 				{/* Language Switcher */}
-				<div className='mt-8 flex justify-center gap-4'>
-					{locales.map(lang => (
-						<button
-							key={lang}
-							onClick={() => setLocale(lang)}
-							className={`cursor-pointer px-4 py-2 rounded-full text-sm transition-all ${
-								locale === lang
-									? 'bg-[#d4af37] text-black'
-									: 'text-white/60 hover:text-white border border-white/10'
-							}`}
-						>
-							{lang.toUpperCase()}
-						</button>
-					))}
+				<div className='mt-8 flex justify-center gap-3 flex-wrap'>
+					{locales.map(lang => {
+						const flags: Record<Locale, string> = {
+							en: '🇺🇸',
+							vi: '🇻🇳',
+							kr: '🇰🇷',
+							jp: '🇯🇵',
+						}
+
+						return (
+							<button
+								key={lang}
+								onClick={() => setLocale(lang)}
+								className={`
+          cursor-pointer
+          flex items-center gap-2
+          px-4 py-2
+          rounded-full
+          text-sm
+          transition-all duration-300
+          border
+          ${
+						locale === lang
+							? 'bg-[#d4af37] text-black border-[#d4af37] shadow-lg shadow-[#d4af37]/20'
+							: 'text-white/70 border-white/10 hover:border-[#d4af37]/40 hover:text-white'
+					}
+        `}
+							>
+								<span className='text-base leading-none'>{flags[lang]}</span>
+
+								<span className='font-medium tracking-wide'>
+									{lang.toUpperCase()}
+								</span>
+							</button>
+						)
+					})}
 				</div>
 			</section>
 
