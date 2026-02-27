@@ -36,7 +36,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'goi-ngo-sen',
-				image: '/menu/goi-ngo-sen.jpg',
+				image: '/menu/goi-ngo-sen.avif',
 				price: '99.000đ',
 				translations: {
 					en: {
@@ -65,7 +65,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'goi-hoa-chuoi',
-				image: '/menu/goi-hoa-chuoi.jpg',
+				image: '/menu/goi-hoa-chuoi.avif',
 				price: '99.000đ',
 				translations: {
 					en: {
@@ -94,7 +94,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'goi-ga-chua-cay',
-				image: '/menu/goi-ga.jpg',
+				image: '/menu/goi-ga.avif',
 				price: '135.000đ',
 				translations: {
 					en: {
@@ -123,7 +123,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'goi-xoai',
-				image: '/menu/goi-xoai.jpg',
+				image: '/menu/goi-xoai.avif',
 				price: '135.000đ',
 				translations: {
 					en: {
@@ -152,7 +152,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'goi-bo-thai',
-				image: '/menu/goi-bo.jpg',
+				image: '/menu/goi-bo.avif',
 				price: '135.000đ',
 				translations: {
 					en: {
@@ -194,7 +194,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'xien-que',
-				image: '/menu/xien-que.jpg',
+				image: '/menu/xien-que.avif',
 				price: '125.000đ',
 				translations: {
 					en: {
@@ -223,7 +223,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'suon-nuong',
-				image: '/menu/suon-nuong.jpg',
+				image: '/menu/suon-nuong.avif',
 				price: '195.000đ',
 				translations: {
 					en: {
@@ -251,7 +251,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'muc-nuong',
-				image: '/menu/muc-nuong.jpg',
+				image: '/menu/muc-nuong.avif',
 				price: '249.000đ',
 				translations: {
 					en: {
@@ -293,7 +293,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'banh-xeo-nam',
-				image: '/menu/banh-xeo-nam.jpg',
+				image: '/menu/banh-xeo-nam.avif',
 				price: '99.000đ',
 				translations: {
 					en: {
@@ -321,7 +321,7 @@ export const menuData: Category[] = [
 			},
 			{
 				id: 'banh-xeo-bo',
-				image: '/menu/banh-xeo-bo.jpg',
+				image: '/menu/banh-xeo-bo.avif',
 				price: '99.000đ',
 				translations: {
 					en: {
@@ -363,7 +363,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'chao-tom',
-				image: '/menu/chao-tom.jpg',
+				image: '/menu/chao-tom.avif',
 				price: '89.000đ',
 				translations: {
 					en: {
@@ -391,7 +391,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'chao-bo-nam',
-				image: '/menu/chao-bo-nam.jpg',
+				image: '/menu/chao-bo-nam.avif',
 				price: '89.000đ',
 				translations: {
 					en: {
@@ -419,7 +419,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'chao-hai-san',
-				image: '/menu/chao-hai-san.jpg',
+				image: '/menu/chao-hai-san.avif',
 				price: '105.000đ',
 				translations: {
 					en: {
@@ -460,7 +460,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'com-chien-ca-man',
-				image: '/menu/com-chien-ca-man.jpg',
+				image: '/menu/com-chien-ca-man.avif',
 				price: '145.000đ',
 				translations: {
 					en: {
@@ -488,7 +488,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'com-chien-trai-thom',
-				image: '/menu/com-chien-trai-thom.jpg',
+				image: '/menu/com-chien-trai-thom.avif',
 				price: '145.000đ',
 				translations: {
 					en: {
@@ -516,7 +516,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'com-chien-dua-bo',
-				image: '/menu/com-chien-dua-bo.jpg',
+				image: '/menu/com-chien-dua-bo.avif',
 				price: '145.000đ',
 				translations: {
 					en: {
@@ -558,7 +558,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'il-pumo-sauvignon',
-				image: '/menu/il-pumo-sauvignon.jpg',
+				image: '/menu/il-pumo-sauvignon.avif',
 				price: '379.000đ',
 				translations: {
 					en: {
@@ -587,7 +587,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'edda-chardonnay',
-				image: '/menu/edda-chardonnay.jpg',
+				image: '/menu/edda-chardonnay.avif',
 				price: '799.000đ',
 				translations: {
 					en: {
@@ -615,7 +615,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'tini-sangiovese',
-				image: '/menu/tini-sangiovese.jpg',
+				image: '/menu/tini-sangiovese.avif',
 				price: '349.000đ',
 				translations: {
 					en: {
@@ -643,7 +643,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'il-pumo-negroamaro',
-				image: '/menu/il-pumo-negroamaro.jpg',
+				image: '/menu/il-pumo-negroamaro.avif',
 				price: '379.000đ',
 				translations: {
 					en: {
@@ -684,7 +684,7 @@ export const menuData: Category[] = [
 		dishes: [
 			{
 				id: 'virgin-mojito',
-				image: '/menu/virgin-mojito.jpg',
+				image: '/menu/virgin-mojito.avif',
 				price: '45.000đ',
 				translations: {
 					en: {
@@ -713,7 +713,7 @@ export const menuData: Category[] = [
 
 			{
 				id: 'lemon-juice',
-				image: '/menu/lemon-juice.jpg',
+				image: '/menu/lemon-juice.avif',
 				price: '40.000đ',
 				translations: {
 					en: {
