@@ -1,74 +1,55 @@
-export type Dish = {
+export type Locale = 'en' | 'vi' | 'kr' | 'jp'
+
+export interface Dish {
 	id: string
-	price: string
 	image: string
+	price: string
 	translations: {
-		en: { name: string; desc: string }
-		vn: { name: string; desc: string }
-		kr: { name: string; desc: string }
+		[key in Locale]: {
+			name: string
+			description: string
+		}
 	}
 }
 
-export const menuData = {
-	salads: [
-		{
-			id: 'lotus',
-			price: '99.000 VND',
-			image: '/menu/lotus.jpg',
-			translations: {
-				en: { name: 'Lotus Stem Salad', desc: 'Lotus stem with pork & shrimp' },
-				vn: { name: 'Gỏi Ngó Sen', desc: 'Ngó sen trộn tôm thịt' },
-				kr: { name: '연근 샐러드', desc: '연근과 새우 샐러드' },
-			},
-		},
-		{
-			id: 'mango',
-			price: '89.000 VND',
-			image: '/menu/mango.jpg',
-			translations: {
-				en: {
-					name: 'Green Mango Salad',
-					desc: 'Fresh mango with herbs & chili',
-				},
-				vn: { name: 'Gỏi Xoài', desc: 'Xoài xanh trộn thảo mộc' },
-				kr: { name: '망고 샐러드', desc: '허브와 칠리 소스' },
-			},
-		},
-	],
-
-	signature: [
-		{
-			id: 'duck',
-			price: '259.000 VND',
-			image: '/menu/duck.jpg',
-			translations: {
-				en: { name: 'Grilled Duck with Herbs', desc: 'Charcoal grilled duck' },
-				vn: { name: 'Vịt Nướng Thảo Mộc', desc: 'Vịt nướng than' },
-				kr: { name: '허브 오리 구이', desc: '숯불 오리 구이' },
-			},
-		},
-		{
-			id: 'bowl',
-			price: '179.000 VND',
-			image: '/menu/bowl.jpg',
-			translations: {
-				en: { name: 'Signature Vietnamese Bowl', desc: 'Balanced rice bowl' },
-				vn: { name: 'Bát Cơm Đặc Biệt', desc: 'Cơm cân bằng dinh dưỡng' },
-				kr: { name: '베트남 시그니처 볼', desc: '균형 잡힌 한 그릇' },
-			},
-		},
-	],
-
-	rolls: [
-		{
-			id: 'fresh-rolls',
-			price: '129.000 VND',
-			image: '/menu/rolls.jpg',
-			translations: {
-				en: { name: 'Fresh Rice Rolls', desc: 'Rice paper rolls with herbs' },
-				vn: { name: 'Cuốn Tươi', desc: 'Cuốn bánh tráng' },
-				kr: { name: '라이스 롤', desc: '허브와 함께' },
-			},
-		},
-	],
+export interface Category {
+	id: string
+	title: string
+	dishes: Dish[]
 }
+
+export const menuData: Category[] = [
+	{
+		id: 'signature',
+		title: 'Signature',
+		dishes: [
+			{
+				id: 'lotus-salad',
+				image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d',
+				price: '135.000đ',
+				translations: {
+					en: {
+						name: 'Lotus Stem Salad with Pork & Shrimp',
+						description:
+							'Fresh lotus stem mixed with herbs, pork and shrimp, served with crispy shrimp crackers.',
+					},
+					vi: {
+						name: 'Gỏi Ngó Sen Tôm Thịt',
+						description:
+							'Ngó sen tươi trộn cùng rau thơm, thịt heo và tôm, ăn kèm bánh phồng tôm giòn.',
+					},
+					kr: {
+						name: '연근 샐러드',
+						description:
+							'허브, 돼지고기, 새우를 곁들인 신선한 연근 샐러드, 새우 크래커 제공.',
+					},
+					jp: {
+						name: '蓮根と豚肉と海老のサラダ',
+						description:
+							'新鮮な蓮根に豚肉と海老、ハーブを合わせ、海老せんべいと共に提供します。',
+					},
+				},
+			},
+		],
+	},
+]

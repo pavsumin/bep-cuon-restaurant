@@ -1,11 +1,14 @@
 'use client'
 
-import { menuData } from '@/lib/menuData'
+import { Locale, menuData } from '@/data/menu'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
+const locales: Locale[] = ['en', 'vi', 'kr', 'jp']
+
 export default function MenuPage() {
-	const [activeCategory, setActiveCategory] = useState<string>(menuData[0].id)
+	const [activeCategory, setActiveCategory] = useState(menuData[0].id)
+	const [locale, setLocale] = useState<Locale>('en')
 
 	const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
 
@@ -32,10 +35,7 @@ export default function MenuPage() {
 	}, [])
 
 	const scrollToCategory = (id: string) => {
-		const section = sectionRefs.current[id]
-		if (!section) return
-
-		section.scrollIntoView({ behavior: 'smooth' })
+		sectionRefs.current[id]?.scrollIntoView({ behavior: 'smooth' })
 	}
 
 	return (
@@ -45,10 +45,28 @@ export default function MenuPage() {
 				<h1 className='text-4xl md:text-5xl font-bold text-[#d4af37]'>
 					Our Menu
 				</h1>
+
 				<p className='mt-4 text-white/70 max-w-xl mx-auto'>
 					Discover authentic Vietnamese cuisine crafted with tradition and
 					refined with elegance.
 				</p>
+
+				{/* Language Switcher */}
+				<div className='mt-8 flex justify-center gap-4'>
+					{locales.map(lang => (
+						<button
+							key={lang}
+							onClick={() => setLocale(lang)}
+							className={`cursor-pointer px-4 py-2 rounded-full text-sm transition-all ${
+								locale === lang
+									? 'bg-[#d4af37] text-black'
+									: 'text-white/60 hover:text-white border border-white/10'
+							}`}
+						>
+							{lang.toUpperCase()}
+						</button>
+					))}
+				</div>
 			</section>
 
 			{/* Sticky Categories */}
@@ -85,26 +103,40 @@ export default function MenuPage() {
 						</h2>
 
 						<div className='grid md:grid-cols-3 gap-8'>
-							{category.dishes.map(dish => (
-								<div
-									key={dish.id}
-									className='group bg-white/5 rounded-2xl overflow-hidden border border-white/5 hover:border-[#d4af37]/40 transition-all duration-300'
-								>
-									<div className='relative h-56'>
-										<Image
-											src={dish.image}
-											alt={dish.name}
-											fill
-											className='object-cover group-hover:scale-105 transition-transform duration-500'
-										/>
-									</div>
+							{category.dishes.map(dish => {
+								const translation = dish.translations[locale]
 
-									<div className='p-6 flex justify-between items-center'>
-										<h3 className='font-medium'>{dish.name}</h3>
-										<span className='text-[#d4af37]'>{dish.price}</span>
+								return (
+									<div
+										key={dish.id}
+										className='group bg-white/5 rounded-2xl overflow-hidden border border-white/5 hover:border-[#d4af37]/40 transition-all duration-300'
+									>
+										<div className='relative h-56'>
+											<Image
+												src={dish.image}
+												alt={translation.name}
+												fill
+												className='object-cover group-hover:scale-105 transition-transform duration-500'
+											/>
+										</div>
+
+										<div className='p-6 space-y-3'>
+											<div className='flex justify-between items-start'>
+												<h3 className='font-medium text-lg'>
+													{translation.name}
+												</h3>
+												<span className='text-[#d4af37] whitespace-nowrap'>
+													{dish.price}
+												</span>
+											</div>
+
+											<p className='text-white/60 text-sm leading-relaxed'>
+												{translation.description}
+											</p>
+										</div>
 									</div>
-								</div>
-							))}
+								)
+							})}
 						</div>
 					</section>
 				))}
