@@ -35,7 +35,19 @@ export default function MenuPage() {
 	}, [])
 
 	const scrollToCategory = (id: string) => {
-		sectionRefs.current[id]?.scrollIntoView({ behavior: 'smooth' })
+		const section = sectionRefs.current[id]
+		if (!section) return
+
+		const navbarHeight = 76
+		const tabsHeight = 72
+		const offset = navbarHeight + tabsHeight + 30 // + небольшой воздух
+
+		const top = section.getBoundingClientRect().top + window.scrollY - offset
+
+		window.scrollTo({
+			top,
+			behavior: 'smooth',
+		})
 	}
 
 	return (
