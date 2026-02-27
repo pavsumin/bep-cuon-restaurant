@@ -7,19 +7,19 @@ const featured = [
 		name: 'Fresh Rice Rolls',
 		desc: 'Traditional Vietnamese rice paper rolls with herbs',
 		price: '89.000 VND',
-		image: '/dishes/dish1.png',
+		image: '/dishes/dish1.avif',
 	},
 	{
 		name: 'Grilled Duck with Herbs',
 		desc: 'Charcoal grilled duck served with fresh greens',
 		price: '259.000 VND',
-		image: '/dishes/dish2.png',
+		image: '/dishes/dish2.avif',
 	},
 	{
 		name: 'Signature Vietnamese Bowl',
 		desc: 'Chef’s special bowl with balanced flavors',
 		price: '149.000 VND',
-		image: '/dishes/dish3.png',
+		image: '/dishes/dish3.avif',
 	},
 ]
 
