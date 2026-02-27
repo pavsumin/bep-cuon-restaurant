@@ -120,17 +120,18 @@ export default function MenuPage() {
 											/>
 										</div>
 
-										<div className='p-6 space-y-3'>
-											<div className='flex justify-between items-start'>
-												<h3 className='font-medium text-lg'>
+										<div className='p-6 space-y-4'>
+											<div className='flex justify-between items-start gap-4'>
+												<h3 className='font-medium text-lg leading-snug line-clamp-2'>
 													{translation.name}
 												</h3>
-												<span className='text-[#d4af37] whitespace-nowrap'>
+
+												<span className='text-[#d4af37] text-lg font-medium whitespace-nowrap'>
 													{dish.price}
 												</span>
 											</div>
 
-											<p className='text-white/60 text-sm leading-relaxed'>
+											<p className='text-white/60 text-sm leading-relaxed line-clamp-3'>
 												{translation.description}
 											</p>
 										</div>
