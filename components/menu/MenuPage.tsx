@@ -117,7 +117,7 @@ export default function MenuPage() {
 									: 'text-white/60 hover:text-white'
 							}`}
 						>
-							{category.title}
+							{category.translations[locale].title}
 						</button>
 					))}
 				</div>
@@ -134,7 +134,7 @@ export default function MenuPage() {
 						}}
 					>
 						<h2 className='text-2xl font-semibold text-[#d4af37] mb-10'>
-							{category.title}
+							{category.translations[locale].title}
 						</h2>
 
 						<div className='grid md:grid-cols-3 gap-8'>

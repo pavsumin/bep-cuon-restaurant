@@ -14,7 +14,11 @@ export interface Dish {
 
 export interface Category {
 	id: string
-	title: string
+	translations: {
+		[key in Locale]: {
+			title: string
+		}
+	}
 	dishes: Dish[]
 }
 
@@ -22,7 +26,13 @@ export const menuData: Category[] = [
 	// 🥗 SALADS
 	{
 		id: 'salads',
-		title: 'Salads',
+		translations: {
+			en: { title: 'Salads' },
+			vn: { title: 'Gỏi' },
+			kr: { title: '샐러드' },
+			jp: { title: 'サラダ' },
+			cn: { title: '沙拉' },
+		},
 		dishes: [
 			{
 				id: 'goi-ngo-sen',
@@ -174,7 +184,13 @@ export const menuData: Category[] = [
 	// 🔥 GRILLED
 	{
 		id: 'grilled',
-		title: 'Grilled',
+		translations: {
+			en: { title: 'Grilled' },
+			vn: { title: 'Món Nướng' },
+			kr: { title: '구이 요리' },
+			jp: { title: '焼き料理' },
+			cn: { title: '烧烤' },
+		},
 		dishes: [
 			{
 				id: 'xien-que',
@@ -267,7 +283,13 @@ export const menuData: Category[] = [
 	// 🥞 PANCAKES
 	{
 		id: 'pancakes',
-		title: 'Pancakes',
+		translations: {
+			en: { title: 'Pancakes' },
+			vn: { title: 'Bánh Xèo' },
+			kr: { title: '반쎄오' },
+			jp: { title: 'バインセオ' },
+			cn: { title: '越南煎饼' },
+		},
 		dishes: [
 			{
 				id: 'banh-xeo-nam',
@@ -331,7 +353,13 @@ export const menuData: Category[] = [
 	// 🍲 CONGEE
 	{
 		id: 'congee',
-		title: 'Congee',
+		translations: {
+			en: { title: 'Congee' },
+			vn: { title: 'Cháo' },
+			kr: { title: '죽' },
+			jp: { title: 'おかゆ' },
+			cn: { title: '粥' },
+		},
 		dishes: [
 			{
 				id: 'chao-tom',
@@ -422,7 +450,13 @@ export const menuData: Category[] = [
 	// 🍚 FRIED RICE
 	{
 		id: 'fried-rice',
-		title: 'Fried Rice',
+		translations: {
+			en: { title: 'Fried Rice' },
+			vn: { title: 'Cơm Chiên' },
+			kr: { title: '볶음밥' },
+			jp: { title: 'チャーハン' },
+			cn: { title: '炒饭' },
+		},
 		dishes: [
 			{
 				id: 'com-chien-ca-man',
@@ -514,7 +548,13 @@ export const menuData: Category[] = [
 	// 🍷 WINE
 	{
 		id: 'wine',
-		title: 'Wine',
+		translations: {
+			en: { title: 'Wine' },
+			vn: { title: 'Rượu Vang' },
+			kr: { title: '와인' },
+			jp: { title: 'ワイン' },
+			cn: { title: '葡萄酒' },
+		},
 		dishes: [
 			{
 				id: 'il-pumo-sauvignon',
@@ -634,7 +674,13 @@ export const menuData: Category[] = [
 	// 🥤 DRINKS
 	{
 		id: 'drinks',
-		title: 'Drinks',
+		translations: {
+			en: { title: 'Drinks' },
+			vn: { title: 'Thức Uống' },
+			kr: { title: '음료' },
+			jp: { title: 'ドリンク' },
+			cn: { title: '饮料' },
+		},
 		dishes: [
 			{
 				id: 'virgin-mojito',
