@@ -16,9 +16,14 @@ export default function MenuPage() {
 		const observer = new IntersectionObserver(
 			entries => {
 				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						setActiveCategory(entry.target.id)
-					}
+					if (!entry.isIntersecting) return
+
+					const id = entry.target.id
+
+					setActiveCategory(prev => {
+						if (prev === id) return prev
+						return id
+					})
 				})
 			},
 			{
@@ -159,16 +164,16 @@ export default function MenuPage() {
 
 										<div className='p-6 space-y-4'>
 											<div className='flex justify-between items-start gap-4'>
-												<h3 className='font-medium text-lg leading-snug line-clamp-2'>
+												<h3 className='font-medium text-lg leading-[24px] min-h-[48px]'>
 													{translation.name}
 												</h3>
 
-												<span className='text-[#d4af37] text-lg font-medium whitespace-nowrap'>
+												<span className='text-[#d4af37] text-lg font-medium leading-[24px] min-h-[48px]'>
 													{dish.price}
 												</span>
 											</div>
 
-											<p className='text-white/60 text-sm leading-relaxed line-clamp-3'>
+											<p className='text-white/60 text-sm leading-[20px] max-h-[60px]'>
 												{translation.description}
 											</p>
 										</div>
