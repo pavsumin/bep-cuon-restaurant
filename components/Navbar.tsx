@@ -105,6 +105,23 @@ export default function Navbar() {
 						{item.name}
 					</Link>
 				))}
+				<a
+					href='/reserve'
+					className='
+                px-5 py-2
+                border border-[#d4af37]
+                rounded-full
+                text-[#d4af37]
+                hover:bg-[#d4af37]
+                hover:text-black
+                transition-all
+                duration-300
+                text-sm
+                tracking-wide
+              '
+				>
+					Book a Table
+				</a>
 			</div>
 		</>
 	)
