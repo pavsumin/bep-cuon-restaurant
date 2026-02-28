@@ -53,6 +53,27 @@ export default function Footer() {
 							<p>Email: bepcuondanang@gmail.com</p>
 						</div>
 					</div>
+
+					<div className='mt-12'>
+						<a
+							href='/reserve'
+							className='
+              px-8 py-3
+              bg-gradient-to-r from-[#d4af37] to-[#f2d47a]
+              text-black
+              rounded-full
+              shadow-[0_8px_30px_rgba(212,175,55,0.4)]
+							hover:scale-105
+              hover:brightness-110
+              transition-all
+              duration-300
+              cursor-pointer
+              font-medium
+            '
+						>
+							Book a Table
+						</a>
+					</div>
 				</div>
 			</div>
 
