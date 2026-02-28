@@ -120,7 +120,7 @@ export default function StoryPage() {
 
 					{/* Primary */}
 					<a
-						href='#book'
+						href='/reserve'
 						className='
               px-8 py-3
               bg-gradient-to-r from-[#d4af37] to-[#f2d47a]

@@ -56,7 +56,7 @@ export default function Navbar() {
 					{/* Reservation Button */}
 					<div className='hidden md:block'>
 						<a
-							href='#book'
+							href='/reserve'
 							className='
                 px-5 py-2
                 border border-[#d4af37]
