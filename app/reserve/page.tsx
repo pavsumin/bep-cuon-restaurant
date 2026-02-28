@@ -140,6 +140,21 @@ export default function ReservePage() {
 								{loading ? 'Sending...' : 'Reserve Now'}
 							</button>
 
+							<button
+								onClick={() => router.push('/')}
+								className='
+									w-full
+									text-white/50
+									hover:scale-101
+									hover:brightness-110
+									transition-all
+									duration-300
+									cursor-pointer
+									tracking-wide'
+							>
+								← Back to Home
+							</button>
+
 							{/* {success && (
 						<p className='text-green-400 text-center mt-3'>
 							Reservation sent successfully!
