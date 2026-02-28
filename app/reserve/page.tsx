@@ -118,24 +118,24 @@ export default function ReservePage() {
 								type='submit'
 								disabled={loading}
 								className='
-          w-full
-          mt-2
-          px-8
-          py-3
-          bg-gradient-to-r
-          from-[#d4af37]
-          to-[#f2d47a]
-          text-black
-          rounded-full
-          shadow-[0_8px_30px_rgba(212,175,55,0.4)]
-          hover:brightness-110
-          hover:scale-101
-					cursor-pointer
-          transition-all
-          duration-300
-          font-medium
-          disabled:opacity-50
-        '
+									w-full
+									mt-2
+									px-8
+									py-3
+									bg-gradient-to-r
+									from-[#d4af37]
+									to-[#f2d47a]
+									text-black
+									rounded-full
+									shadow-[0_8px_30px_rgba(212,175,55,0.4)]
+									hover:brightness-110
+									hover:scale-101
+									cursor-pointer
+									transition-all
+									duration-300
+									font-medium
+									disabled:opacity-50
+								'
 							>
 								{loading ? 'Sending...' : 'Reserve Now'}
 							</button>
