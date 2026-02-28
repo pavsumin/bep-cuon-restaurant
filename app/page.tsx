@@ -1,4 +1,5 @@
 import FeaturedPreview from '@/components/FeaturedPreview'
+import GallerySection from '@/components/GallerySection'
 import Hero from '@/components/Hero'
 import MichelinBlock from '@/components/MichelinBlock'
 import StorySection from '@/components/StorySection'
@@ -10,6 +11,7 @@ export default function Home() {
 			<FeaturedPreview />
 			<MichelinBlock />
 			<StorySection />
+			<GallerySection />
 		</main>
 	)
 }
