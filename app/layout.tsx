@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 	},
 
 	description:
-		'Bếp Cuốn Đà Nẵng – authentic Vietnamese cuisine in Da Nang. Michelin Selected 2024. Fresh rolls, grilled specialties, traditional dishes and wine selection.',
+		'Bếp Cuốn Đà Nẵng – authentic Vietnamese cuisine in Da Nang. Michelin Selected 2025. Fresh rolls, grilled specialties, traditional dishes and wine selection.',
 
 	keywords: [
 		'Bếp Cuốn Đà Nẵng',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'Bếp Cuốn Đà Nẵng | Vietnamese Cuisine',
 		description:
-			'Authentic Vietnamese cuisine in Da Nang. Michelin Selected 2024.',
+			'Authentic Vietnamese cuisine in Da Nang. Michelin Selected 2025.',
 		url: '/',
 		siteName: 'Bếp Cuốn Đà Nẵng',
 		images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'Bếp Cuốn Đà Nẵng',
 		description:
-			'Authentic Vietnamese cuisine in Da Nang. Michelin Selected 2024.',
+			'Authentic Vietnamese cuisine in Da Nang. Michelin Selected 2025.',
 		images: ['/og-image.jpg'],
 	},
 
