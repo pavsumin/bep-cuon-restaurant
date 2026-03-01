@@ -4,6 +4,8 @@ import { Playfair_Display, Poppins } from 'next/font/google'
 import './globals.css'
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://bep-cuon-restaurant.vercel.app'),
+
 	title: {
 		default: 'Bếp Cuốn Đà Nẵng | Vietnamese Cuisine',
 		template: '%s | Bếp Cuốn Đà Nẵng',
@@ -23,14 +25,13 @@ export const metadata: Metadata = {
 	],
 
 	authors: [{ name: 'Bếp Cuốn Đà Nẵng' }],
-
 	creator: 'Bếp Cuốn Đà Nẵng',
 
 	openGraph: {
 		title: 'Bếp Cuốn Đà Nẵng | Vietnamese Cuisine',
 		description:
 			'Authentic Vietnamese cuisine in Da Nang. Michelin Selected 2024.',
-		url: 'https://https://bep-cuon-restaurant.vercel.app/',
+		url: '/',
 		siteName: 'Bếp Cuốn Đà Nẵng',
 		images: [
 			{
